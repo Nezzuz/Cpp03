@@ -6,14 +6,14 @@ ClapTrap::ClapTrap(std::string name)
 	_hit_points = 10;
 	_energy_points = 10;
 	_attack_damage = 0;
-	std::cout << "***********Constructor called***********" << std::endl;
+	std::cout << "***********ClapTrap constructor called***********" << std::endl;
 	std::cout << "Initial Values:" << std::endl << "Name: " << _name << std::endl << "Hit points: " << _hit_points << std::endl << "Energy points: " << _energy_points << std::endl << "Attack damage " << _attack_damage << std::endl << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap &copy)
 {
 	*this = copy;
-	std::cout << "***********Copy constructor called***********" << std::endl;
+	std::cout << "***********ClapTrap copy constructor called***********" << std::endl;
 	std::cout << "Initial Values:" << std::endl << "Name: " << _name << std::endl << "Hit points: " << _hit_points << std::endl << "Energy points: " << _energy_points << std::endl << "Attack damage " << _attack_damage << std::endl << std::endl;
 }
 
@@ -31,7 +31,7 @@ ClapTrap& ClapTrap::operator=(ClapTrap& copy)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "***********Destructor called***********" << std::endl;
+	std::cout << "***********ClapTrap destructor called***********" << std::endl;
 }
 
 void            ClapTrap::attack(const std::string& target)

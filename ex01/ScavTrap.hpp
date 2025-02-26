@@ -5,13 +5,12 @@
 
 class ScavTrap : public ClapTrap
 {
-	private:
+	public:
 		ScavTrap(std::string name);	
 		ScavTrap(ScavTrap& copy);	
 		ScavTrap& operator=(ScavTrap& copy);
-		~ScavTrap();
-	public:
+		virtual ~ScavTrap();
 		void	guardGate(void);
-}
+};
 
 #endif
