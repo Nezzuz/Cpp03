@@ -1,10 +1,10 @@
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main(void)
 {
-	ClapTrap julen("Julen");
-	ClapTrap ibon("Ibon");
+	ScavTrap julen("Julen");
+	ScavTrap ibon("Ibon");
 
 	julen.attack("Ibon");
 	ibon.beRepaired(5);
@@ -22,7 +22,8 @@ int main(void)
 	ibon.beRepaired(5);
 	ibon.beRepaired(5);
 
-	ClapTrap iker(julen);
+	ScavTrap iker(julen);
 	iker.beRepaired(20);
+	iker.guardGate();
 	return (0);
 }

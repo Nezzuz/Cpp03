@@ -1,26 +1,23 @@
 NAME = ScavTrap
-ScavTrap= ScavTrap
 
-SRC = 	main.cpp \
-	ClapTrap.cpp \
-	ScavTrap.cpp
+SRC =   main.cpp \
+        ClapTrap.cpp \
+        ScavTrap.cpp
 
-CXX = c++ 
+CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-all: $(ScavTrap)
+all: $(NAME)
 
-$(NAME): all 
+$(NAME): $(SRC)
+	$(CXX) $(CXXFLAGS) $(SRC) -o $(NAME)
 
-$(ScavTrap):
-	$(CXX) $(CXXFLAGS) $(SRC) -o $(ScavTrap)
-        
 clean:
-	rm -rf $(ScavTrap)
-
-re: fclean all 
+	rm -rf $(NAME)
 
 fclean: clean
+
+re: fclean all
 
 .PHONY: all fclean clean re
